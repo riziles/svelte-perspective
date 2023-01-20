@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<script src="https://cdn.jsdelivr.net/npm/@finos/perspective"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@finos/perspective-viewer"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@finos/perspective-viewer-datagrid"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@finos/perspective-viewer-d3fc"></script>
+		
+		<link
+			rel="stylesheet"
+			crossorigin="anonymous"
+			href="https://cdn.jsdelivr.net/npm/@finos/perspective-viewer/dist/css/material.css"
+		/>
+		<meta name="viewport" content="width=device-width" />
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
