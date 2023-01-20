@@ -1,5 +1,3 @@
-# Finos Perspective in Svelte
-
-Can only seem to get it working with CDN, Vite refuses to bundle the perspective modules.
+# FINOS Perspective in Svelte
 
 demo here: https://steady-cat-fb5198.netlify.app/

@@ -11,9 +11,7 @@
 	</main>
 
 	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-
-		<p>visit <a href="https://perspective.finos.org/">perspective.finos.org</a> to learn about Perspective</p>
+		<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit. Visit <a href="https://perspective.finos.org/">perspective.finos.org</a> to learn about Perspective</p>
 	</footer>
 </div>
 

@@ -1,7 +1,4 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
 	import Perspective from './Perspective.svelte';
 </script>
 
@@ -15,5 +12,4 @@
 </section>
 
 <style>
-
 </style>
