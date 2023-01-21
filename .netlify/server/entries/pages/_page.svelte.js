@@ -3,13 +3,13 @@ import "@finos/perspective";
 const themes = "";
 const Perspective_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "perspective-viewer.svelte-az59so{position:absolute;top:100px;left:100px;right:100px;bottom:100px}",
+  code: "perspective-viewer.svelte-1bfd612{position:absolute;top:100px;left:100px;right:100px;bottom:100px}@media screen and (max-width: 700px){perspective-viewer.svelte-1bfd612{top:50px;left:0px;right:0px;bottom:0px}}",
   map: null
 };
 const Perspective = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let perspectiveSvelte;
   $$result.css.add(css);
-  return `<div><perspective-viewer class="${"svelte-az59so"}"${add_attribute("this", perspectiveSvelte, 0)}></perspective-viewer>
+  return `<div><perspective-viewer class="${"svelte-1bfd612"}"${add_attribute("this", perspectiveSvelte, 0)}></perspective-viewer>
 </div>`;
 });
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
