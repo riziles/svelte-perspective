@@ -66,4 +66,15 @@ bucket(date(year, month, day), \'W\')`
 		right: 100px;
 		bottom: 100px;
 	}
+
+@media screen and (max-width: 700px) {
+	perspective-viewer {
+		top: 50px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+  }
+}
+
+
 </style>
