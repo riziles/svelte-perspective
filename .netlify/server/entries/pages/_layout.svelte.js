@@ -34,7 +34,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 
 	<main class="${"svelte-8o1gnw"}">${slots.default ? slots.default({}) : ``}</main>
 
-	<footer class="${"svelte-8o1gnw"}"><p>visit <a href="${"https://kit.svelte.dev"}" class="${"svelte-8o1gnw"}">kit.svelte.dev</a> to learn SvelteKit. Visit <a href="${"https://perspective.finos.org/"}" class="${"svelte-8o1gnw"}">perspective.finos.org</a> to learn about Perspective</p></footer>
+	<footer class="${"svelte-8o1gnw"}"><p>Visit <a href="${"https://kit.svelte.dev"}" class="${"svelte-8o1gnw"}">kit.svelte.dev</a> to learn SvelteKit. Visit <a href="${"https://perspective.finos.org/"}" class="${"svelte-8o1gnw"}">perspective.finos.org</a> to learn about Perspective</p></footer>
 </div>`;
 });
 export {

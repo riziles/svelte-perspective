@@ -1,5 +1,6 @@
 import { c as create_ssr_component, d as add_attribute, v as validate_component } from "../../chunks/index.js";
 import "@finos/perspective";
+const themes = "";
 const Perspective_svelte_svelte_type_style_lang = "";
 const css = {
   code: "perspective-viewer.svelte-az59so{position:absolute;top:100px;left:100px;right:100px;bottom:100px}",

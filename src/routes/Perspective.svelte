@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import perspective from '@finos/perspective';
+	import "@finos/perspective-viewer/dist/css/themes.css";
 
 	let table = [];
 
@@ -9,15 +10,7 @@
 	let dataGrid;
 	let d3fc;
 
-	onMount(async () => {
-		viewerModule = await import('@finos/perspective-viewer');
-		dataGrid = await import('@finos/perspective-viewer-datagrid');
-		d3fc = await import('@finos/perspective-viewer-d3fc');
-
-		let WORKER = perspective.worker();
-		let REQ = fetch('https://api.covidtracking.com/v1/states/daily.csv');
-
-		let LAYOUT = {
+	let LAYOUT = {
 			plugin: 'Y Area',
 			plugin_config: {
 				legend: {
@@ -43,9 +36,13 @@ bucket(date(year, month, day), \'W\')`
 			aggregates: {}
 		};
 
-		// if (!customElements.get('perspective-viewer')) {
-		//     customElements.define('perspective-viewer', PerspectiveViewer);
-		// };
+	onMount(async () => {
+		dataGrid = await import('@finos/perspective-viewer-datagrid');
+		d3fc = await import('@finos/perspective-viewer-d3fc');
+		viewerModule = await import('@finos/perspective-viewer');
+
+		let WORKER = perspective.worker();
+		let REQ = fetch('https://api.covidtracking.com/v1/states/daily.csv');
 
 		const resp = await REQ;
 		const csv = await resp.text();
@@ -55,7 +52,6 @@ bucket(date(year, month, day), \'W\')`
 		perspectiveSvelte.toggleConfig();
 	});
 
-	// window.addEventListener("DOMContentLoaded", load);
 </script>
 
 <div>
