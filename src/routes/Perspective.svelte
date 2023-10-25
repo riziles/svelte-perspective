@@ -37,6 +37,7 @@ bucket(date(year, month, day), \'W\')`
 		};
 
 	onMount(async () => {
+		await import('@finos/perspective-viewer-openlayers');
 		dataGrid = await import('@finos/perspective-viewer-datagrid');
 		d3fc = await import('@finos/perspective-viewer-d3fc');
 		viewerModule = await import('@finos/perspective-viewer');
