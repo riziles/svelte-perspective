@@ -8,5 +8,7 @@ node_modules
 !.env.example
 .vercel
 .output
+.netlify
+.playwright-cli
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
