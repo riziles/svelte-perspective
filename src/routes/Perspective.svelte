@@ -2,6 +2,9 @@
 	import perspective from '@finos/perspective';
 	import '@finos/perspective-viewer/dist/css/themes.css';
 
+	import SERVER_WASM from '@finos/perspective/dist/wasm/perspective-server.wasm?url';
+	import CLIENT_WASM from '@finos/perspective-viewer/dist/wasm/perspective-viewer.wasm?url';
+
 	let perspectiveSvelte = $state();
 
 	const LAYOUT = {
@@ -37,23 +40,29 @@ bucket(date(year, month, day), \'W\')`
 		let cancelled = false;
 
 		async function init() {
-			await import('@finos/perspective-viewer-datagrid');
-			await import('@finos/perspective-viewer-d3fc');
-			await import('@finos/perspective-viewer');
+			// Import viewer (must be dynamic — references HTMLElement)
+			const perspective_viewer = await import('@finos/perspective-viewer');
+
+			// Init Perspective WASM
+			await Promise.all([
+				perspective.init_server(fetch(SERVER_WASM)),
+				perspective_viewer.init_client(fetch(CLIENT_WASM))
+			]);
 
 			if (cancelled) return;
 
-			const plugin = await viewer.getPlugin('Y Area');
-			plugin.max_cells = 10000000;
-			plugin.max_columns = 10000000;
+			// Import plugins (auto-register via side effects)
+			await import('@finos/perspective-viewer-datagrid');
+			await import('@finos/perspective-viewer-d3fc');
 
-			const WORKER = perspective.worker();
+			if (cancelled) return;
+
+			const worker = await perspective.worker();
 			const resp = await fetch('https://api.covidtracking.com/v1/states/daily.csv');
 			const csv = await resp.text();
-			const table = WORKER.table(csv);
+			const table = await worker.table(csv);
 			viewer.load(table);
 			viewer.restore(LAYOUT);
-			viewer.toggleConfig();
 		}
 
 		init();
@@ -85,6 +94,4 @@ bucket(date(year, month, day), \'W\')`
 		bottom: 0px;
   }
 }
-
-
 </style>

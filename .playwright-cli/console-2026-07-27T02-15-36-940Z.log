@@ -1,0 +1,14 @@
+[     347ms] TypeError: viewer.getPlugin is not a function
+    at init (http://localhost:5173/src/routes/Perspective.svelte:52:57)
+[  100601ms] NotSupportedError: Failed to execute 'define' on 'CustomElementRegistry': the name "perspective-viewer-datagrid-toolbar" has already been used with this registry
+    at bt (http://localhost:5173/node_modules/.vite/deps/@finos_perspective-viewer-datagrid.js?t=1785118637341&v=ac0eb1f0:4279:17)
+    at http://localhost:5173/node_modules/.vite/deps/@finos_perspective-viewer-datagrid.js?t=1785118637341&v=ac0eb1f0:4281:1
+[  100677ms] [WARNING] The d3fc components "d3fc-canvas, d3fc-group, d3fc-svg" is/are already registered on window. Be aware that this can create compatibility issues if different versions are used. @ http://localhost:5173/node_modules/@sveltejs/kit/src/runtime/client/client.js?v=078ea535:3440
+[  100681ms] NotSupportedError: Failed to execute 'define' on 'CustomElementRegistry': the name "perspective-viewer-d3fc-xbar" has already been used with this registry
+    at http://localhost:5173/node_modules/.vite/deps/@finos_perspective-viewer-d3fc.js?t=1785118637341&v=0b85c6f5:13797:19
+    at Array.forEach (<anonymous>)
+    at Na (http://localhost:5173/node_modules/.vite/deps/@finos_perspective-viewer-d3fc.js?t=1785118637341&v=0b85c6f5:13794:5)
+    at http://localhost:5173/node_modules/.vite/deps/@finos_perspective-viewer-d3fc.js?t=1785118637341&v=0b85c6f5:14027:7
+[  105415ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5173/@vite/client:992
+[  151961ms] TypeError: worker.table is not a function
+    at init (http://localhost:5173/src/routes/Perspective.svelte:69:25)

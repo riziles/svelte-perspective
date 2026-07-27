@@ -1,3 +1,3 @@
-// since there's no dynamic data here, we can prerender
-// it so that it gets served as a static asset in production
-export const prerender = true;
+// Perspective viewer requires browser APIs (HTMLElement, WASM)
+// so we can't prerender or SSR this page
+export const ssr = false;

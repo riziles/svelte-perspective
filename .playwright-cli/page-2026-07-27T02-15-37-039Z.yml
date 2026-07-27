@@ -1,0 +1,26 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - link [ref=e6] [cursor=pointer]:
+      - /url: https://kit.svelte.dev
+      - img "SvelteKit" [ref=e7]
+    - navigation [ref=e8]:
+      - list [ref=e11]:
+        - listitem [ref=e12]:
+          - link "Home" [ref=e13] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e14]:
+          - link "About" [ref=e15] [cursor=pointer]:
+            - /url: /about
+    - link [ref=e19] [cursor=pointer]:
+      - /url: https://github.com/sveltejs/kit
+      - img "GitHub" [ref=e20]
+  - main [ref=e21]
+  - contentinfo [ref=e23]:
+    - paragraph [ref=e24]:
+      - text: Visit
+      - link "kit.svelte.dev" [ref=e25] [cursor=pointer]:
+        - /url: https://kit.svelte.dev
+      - text: to learn SvelteKit. Visit
+      - link "perspective.finos.org" [ref=e26] [cursor=pointer]:
+        - /url: https://perspective.finos.org/
+      - text: to learn about Perspective
