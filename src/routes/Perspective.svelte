@@ -31,12 +31,19 @@ bucket(date(year, month, day), \'W\')`
 	};
 
 	$effect(() => {
+		const viewer = perspectiveSvelte;
+		if (!viewer) return;
+
+		let cancelled = false;
+
 		async function init() {
 			await import('@finos/perspective-viewer-datagrid');
 			await import('@finos/perspective-viewer-d3fc');
 			await import('@finos/perspective-viewer');
 
-			const plugin = await perspectiveSvelte.getPlugin('Y Area');
+			if (cancelled) return;
+
+			const plugin = await viewer.getPlugin('Y Area');
 			plugin.max_cells = 10000000;
 			plugin.max_columns = 10000000;
 
@@ -44,11 +51,16 @@ bucket(date(year, month, day), \'W\')`
 			const resp = await fetch('https://api.covidtracking.com/v1/states/daily.csv');
 			const csv = await resp.text();
 			const table = WORKER.table(csv);
-			perspectiveSvelte.load(table);
-			perspectiveSvelte.restore(LAYOUT);
-			perspectiveSvelte.toggleConfig();
+			viewer.load(table);
+			viewer.restore(LAYOUT);
+			viewer.toggleConfig();
 		}
+
 		init();
+
+		return () => {
+			cancelled = true;
+		};
 	});
 </script>
 
