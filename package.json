@@ -5,27 +5,27 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"lint": "prettier --check . && eslint .",
+		"format": "prettier --write ."
 	},
 	"devDependencies": {
-		"@fontsource/fira-mono": "^4.5.10",
+		"@fontsource/fira-mono": "^5.3.0",
 		"@neoconfetti/svelte": "^1.0.0",
-		"@sveltejs/adapter-netlify": "^1.0.0-next.88",
-		"@sveltejs/kit": "^1.0.0",
-		"eslint": "^8.28.0",
-		"eslint-config-prettier": "^8.5.0",
-		"eslint-plugin-svelte3": "^4.0.0",
-		"prettier": "^2.8.0",
-		"prettier-plugin-svelte": "^2.8.1",
-		"svelte": "^3.54.0",
-		"vite": "^4.0.0"
+		"@sveltejs/adapter-netlify": "^6.0.0",
+		"@sveltejs/kit": "^2.0.0",
+		"eslint": "^9.0.0",
+		"eslint-config-prettier": "^10.0.0",
+		"eslint-plugin-svelte": "^3.0.0",
+		"prettier": "^3.0.0",
+		"prettier-plugin-svelte": "^4.0.0",
+		"svelte": "^5.0.0",
+		"vite": "^8.0.0"
 	},
 	"type": "module",
 	"dependencies": {
-		"@finos/perspective": "^1.9.2",
-		"@finos/perspective-viewer": "^1.9.2",
-		"@finos/perspective-viewer-d3fc": "^1.9.2",
-		"@finos/perspective-viewer-datagrid": "^1.9.2"
+		"@finos/perspective": "^3.8.0",
+		"@finos/perspective-viewer": "^3.8.0",
+		"@finos/perspective-viewer-d3fc": "^3.8.0",
+		"@finos/perspective-viewer-datagrid": "^3.8.0"
 	}
 }
